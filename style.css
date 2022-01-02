@@ -27,18 +27,27 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 30%;
+  width: 35%;
 }
 
-.nav .hamburger a {
+.nav .hamburger {
   display: none;
+}
+
+.Logo {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+  font-family: "Pushster", cursive;
+  font-size: 1.2rem;
 }
 
 .List-elements {
   text-decoration: none;
   cursor: default;
   color: black;
-  font-family: "Pushster", cursive;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 900;
   font-size: 1.2rem;
 }
 
@@ -85,22 +94,21 @@ html {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1044px) {
   .nav ul {
     width: 50%;
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 857px) {
   .nav ul {
     display: none;
   }
   .nav .hamburger {
+    display: inline;
     width: 10%;
   }
-  .nav .hamburger a {
-    display: inline;
-  }
+
   .nav .hamburger div {
     width: 1.9rem;
     height: 5px;
