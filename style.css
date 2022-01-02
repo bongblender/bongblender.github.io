@@ -61,7 +61,7 @@ html {
   height: 40vh;
   justify-content: center;
   background-color: rgb(255, 176, 80);
-  padding: 10px 10px 40px 0px;
+  padding: 10px 10px 20px 0px;
   border-bottom-left-radius: 5%;
 }
 
@@ -72,7 +72,11 @@ html {
 }
 
 .side-nav ul li {
-  padding-top: 5px;
+  display: block;
+  height: 7vh;
+  width: 15vh;
+  text-align: center;
+  text-justify: center;
 }
 
 @media (max-width: 1160px) {
