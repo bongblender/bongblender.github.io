@@ -12,6 +12,10 @@ html {
   scroll-behavior: smooth;
 }
 
+p {
+  margin: 0% 10% 0% 10%;
+}
+
 .nav {
   display: flex;
   flex-wrap: wrap;
@@ -86,6 +90,10 @@ html {
   width: 15vh;
   text-align: center;
   text-justify: center;
+}
+/* modifying scroll bar */
+body::-webkit-scrollbar {
+  width: 0px; /* width of the entire scrollbar */
 }
 
 @media (max-width: 1160px) {
