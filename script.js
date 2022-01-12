@@ -17,30 +17,23 @@ window.addEventListener("scroll", () => {
     console.log(y);
 })
 
+var state = 0
 tab_button.addEventListener("click", () => {
-    side_nav.classList.add("mo-tab-out");
-    side_nav.classList.remove("mo-tab-close");
+    if (state === 0) {
+        side_nav.classList.add("mo-tab-out");
+        side_nav.classList.remove("mo-tab-close");
+        state = 1;
+    }else if (state === 1) {
+        side_nav.classList.add("mo-tab-close");
+        side_nav.classList.remove("mo-tab-out");
+        state = 0;
+    } else {
+        log("error");
+    }
+    
 })
-
 tab_close.addEventListener("click", () => {
     side_nav.classList.add("mo-tab-close");
     side_nav.classList.remove("mo-tab-out");
+    state = 0;
 })
-
-
-
-// var state = 0
-// tab_button.addEventListener("click", () => {
-//     if (state === 0) {
-//         side_nav.classList.add("mo-tab-out");
-//         side_nav.classList.remove("mo-tab-close");
-//         state = 1;
-//     }else if (state === 1) {
-//         side_nav.classList.add("mo-tab-close");
-//         side_nav.classList.remove("mo-tab-out");
-//         state = 0;
-//     } else {
-//         log("error");
-//     }
-    
-// })
