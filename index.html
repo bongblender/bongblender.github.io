@@ -17,7 +17,7 @@
 </head>
 <body>
     <!-- Top-nav-bar -->
-    <nav id="Nav" class="nav-max">
+    <nav id="Nav" class="nav-max" style="z-index: 300;">
         <!-- mobile navigetion -->
         <div class="tab-button-container">
             <a id="tab-button" target="#" >
@@ -37,7 +37,7 @@
             <a href="#about" >About</a>
         </div>
     </nav>
-    <div id="tab-for-mobile" class="mo-tab-close">
+    <div id="tab-for-mobile" class="mo-tab-close" style="z-index: 400">
         <a id="tab-close" ><img src="arrow_circle_left_white_24dp.svg" alt="" srcset=""></a>
         <div id="tab-button">
             <a href="#intro">Intro</a>
@@ -47,22 +47,22 @@
         </div>
     </div>
     <!-- Intro Section -->
-    <section id="intro" >
+    <div class="section" id="intro" >
         <!-- <img src="AnyConv.com__1.jpg" alt="" width="100%"> -->
-        <h1>Hello Intro</h1>
-    </section>
+        <img src="intro_backg.png" alt="" srcset="">
+    </div>
     <!-- projects -->
-    <section id="projects">
+    <div class="section" id="projects">
         <h1>Hello Projects</h1>
-    </section>
+    </div>
     <!-- github -->
-    <section id="github">
+    <div class="section" id="github">
         <h1>Hello Github</h1>
-    </section>
+    </div>
     <!-- about -->
-    <section id="about">
+    <div class="section" id="about">
         <h1>Hello About</h1>
-    </section>
+    </div>
     <!-- main java script -->
     <script src="script.js"></script>
 </body>
