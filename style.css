@@ -38,11 +38,11 @@ a {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
-a:hover {
+/* a:hover {
   text-shadow: 0 0 10px rgb(255, 255, 255);
-}
+} */
 a:active {
-  text-shadow: rgba(255, 255, 255, 0.452) 0 0 10px;
+  text-shadow: 0 0 10px rgb(255, 255, 255);
 }
 
 /* Top-nav-bar */
