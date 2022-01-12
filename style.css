@@ -26,7 +26,7 @@ body {
 }
 
 section {
-  background-color: rgb(218, 189, 28);
+  background-color: rgb(189 54 185);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -37,6 +37,13 @@ a {
   font-weight: bolder;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+}
+a:hover {
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #2e00e6, 0 0 40px #6300e6,
+    0 0 50px #c300e6, 0 0 60px #e200e6, 0 0 70px #e600ca;
+}
+a:active {
+  text-shadow: rgb(255, 0, 170) 1px 0 10px;
 }
 
 /* Top-nav-bar */
