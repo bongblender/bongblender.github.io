@@ -39,11 +39,10 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 a:hover {
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #2e00e6, 0 0 40px #6300e6,
-    0 0 50px #c300e6, 0 0 60px #e200e6, 0 0 70px #e600ca;
+  text-shadow: 0 0 10px rgb(255, 255, 255);
 }
 a:active {
-  text-shadow: rgb(255, 0, 170) 1px 0 10px;
+  text-shadow: rgba(255, 255, 255, 0.452) 0 0 10px;
 }
 
 /* Top-nav-bar */
