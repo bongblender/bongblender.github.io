@@ -89,10 +89,14 @@ nav {
   display: flex;
   align-items: center;
 }
-.logo h1 {
+.logo a {
   font-family: var(--headingEnglish);
   font-size: x-large;
   padding-left: 5px;
+  -webkit-tap-highlight-color: transparent;
+}
+.logo a:active {
+  text-shadow: none;
 }
 /* mobile nav */
 #tab-for-mobile {
@@ -109,8 +113,19 @@ nav {
 }
 #tab-button img {
   width: 30px;
-  transform: rotateZ(45deg);
 }
+#tab-button:hover img {
+}
+/* tab button rotation animetion */
+.tab-button-strait {
+  transform: rotateZ(0deg);
+  transition: all 0.12s ease-in-out;
+}
+.tab-button-rotate {
+  transform: rotateZ(45deg);
+  transition: all 0.12s ease-in-out;
+}
+
 #tab-close {
   display: flex;
   align-items: center;
