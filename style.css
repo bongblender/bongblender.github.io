@@ -28,9 +28,9 @@ body {
 .section {
   background-color: rgb(19, 18, 19);
   min-height: 100vh;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 a {
   list-style: none;
@@ -65,13 +65,13 @@ nav {
   /* animation-play-state: running; */
   height: var(--max-nav-height);
   background-color: var(--top-nav-secondary-color);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-out;
 }
 .nav-min {
   /* animation-play-state: running; */
   height: var(--min-nav-height);
   background-color: var(--top-nav-primary-color);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-out;
 }
 
 .tab-button-container {
@@ -114,8 +114,6 @@ nav {
 #tab-button img {
   width: 30px;
 }
-#tab-button:hover img {
-}
 /* tab button rotation animetion */
 .tab-button-strait {
   transform: rotateZ(0deg);
@@ -154,17 +152,92 @@ nav {
 }
 
 /* section intro */
-#intro {
-  background-color: #3a3b3c;
-  object-fit: contain;
-  object-position: center center;
-  /* background-color: #f5012a; */
-}
-#intro img {
-  width: 80%;
+
+/* slider */
+.intro-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   position: absolute;
-  object-fit: contain;
-  object-position: center center;
+  width: 100%;
+  height: 100%;
+  padding-right: 10%;
+}
+.slider {
+  overflow: hidden;
+  width: 400px; /* to make mob responsive change just width */
+  height: 230px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 5px rgb(255, 255, 255);
+}
+.img-container {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  animation-name: slide-animetion;
+  animation-duration: 10s;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+}
+@keyframes slide-animetion {
+  0% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: 800px;
+  }
+}
+/* intro text */
+#intor-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 50%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+#intor-text h1 {
+  color: white;
+  font-size: 70px;
+  padding-left: 10%;
+}
+#intor-text p {
+  color: white;
+  font-size: 25px;
+  padding-left: 10%;
+  padding-right: 20%;
+  /* padding-top: 40%; */
+}
+
+#intor-text img {
+  width: 20%;
+  margin-left: 8%;
+}
+
+.overlay-blur {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #6201ff3d;
+  backdrop-filter: blur(2px);
+}
+.intro-bg {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: absolute;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #3a3b3c;
+}
+.intro-bg img {
+  /* margin-top: 10%; */
+  width: 70%;
+  position: absolute;
+  object-fit: fill;
 }
 
 /* section project */
@@ -177,9 +250,15 @@ nav {
   background-color: #1bd824;
 }
 
-/* section github */
+/* section about */
 #about {
   background-color: #d8d51b;
+}
+
+/* footer */
+footer {
+  background-color: #3a3b3c;
+  height: 30vh;
 }
 
 /* screen capability / mobile support */
@@ -188,8 +267,12 @@ nav {
   #nav-buttons {
     width: 60%;
   }
-  #intro img {
+  .intro-bg img {
     width: 90%;
+  }
+  #intor-text img {
+    width: 25%;
+    margin-left: 8%;
   }
 }
 @media (max-width: 735px) {
@@ -202,7 +285,27 @@ nav {
   #tab-for-mobile {
     display: block;
   }
-  #intro img {
+  .intro-bg img {
     width: 100%;
+  }
+  #intor-text img {
+    height: auto;
+    width: 30%;
+    margin-left: 8%;
+  }
+  #intor-text h1 {
+    padding-top: 20vh;
+  }
+  #intor-text {
+    width: 100%;
+  }
+  .intro-container {
+    flex-direction: column;
+    padding-right: 0%;
+    margin-bottom: 10%;
+  }
+  .slider {
+    margin-bottom: 10%;
+    width: 75vw;
   }
 }
