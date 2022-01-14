@@ -154,15 +154,19 @@ nav {
 
 /* section intro */
 #home {
-  background: linear-gradient(45deg, #49178fff 20%, #45b0c6ff 90%);
+  background: linear-gradient(55deg, #49178fff 30%, #45b0c6ff 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
+#home-overlay-img2 {
+  display: none;
+}
 /* section project */
 #projects {
-  background-color: #0083f6;
+  background-color: #ffffff;
 }
 
 /* section github */
@@ -186,6 +190,12 @@ footer {
 @media (max-width: 991px) {
   #nav-buttons {
     width: 60%;
+  }
+  #home-overlay-img1 {
+    display: none;
+  }
+  #home-overlay-img2 {
+    display: block;
   }
 }
 @media (max-width: 735px) {
