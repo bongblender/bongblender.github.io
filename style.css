@@ -180,14 +180,18 @@ nav {
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
-  margin-top: 25vh;
+  margin-top: 15vh;
   width: 130px;
   height: 50px;
   border-radius: 9px;
+  box-shadow: 3px 7px 5px rgba(0, 0, 0, 0.301);
 }
 .button-body:hover {
-  background-color: #ff0000;
-  color: #1bd824;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.301);
+}
+.button-body:active {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.301);
+  transform: translateY(2px);
 }
 /* section project */
 #projects {
@@ -216,12 +220,12 @@ footer {
   #nav-buttons {
     width: 60%;
   }
-  #home-overlay-img1 {
+  /* #home-overlay-img1 {
     display: none;
   }
   #home-overlay-img2 {
     display: block;
-  }
+  } */
 }
 @media (max-width: 735px) {
   #nav-buttons {
