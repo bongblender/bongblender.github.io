@@ -2,6 +2,7 @@ let nav = document.getElementById("Nav")
 let tab_button = document.getElementById("tab-button")
 let tab_close =document.getElementById("tab-close")
 let side_nav = document.getElementById("tab-for-mobile")
+let lets_talk = document.getElementsByClassName("lets-talk")
 
 
 window.addEventListener("scroll", () => {
@@ -14,7 +15,7 @@ window.addEventListener("scroll", () => {
         nav.classList.add("nav-max")
         nav.classList.remove("nav-min")
     }
-    console.log(y);
+    console.log(lets_talk.scrollY);
 })
 
 var state = 0

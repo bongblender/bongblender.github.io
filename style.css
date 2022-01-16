@@ -58,21 +58,21 @@ nav {
   /* background-color: rgba(255, 255, 255, 0.39); */
   justify-content: space-between;
   align-items: center;
-  padding-left: 5%;
-  padding-right: 15%;
+  padding-left: 10%;
+  padding-right: 10%;
   color: aliceblue;
 }
 .nav-max {
   /* animation-play-state: running; */
   height: var(--max-nav-height);
   background-color: var(--top-nav-secondary-color);
-  transition: all 0.2s ease-out;
+  transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
 }
 .nav-min {
   /* animation-play-state: running; */
   height: var(--min-nav-height);
   background-color: var(--top-nav-primary-color);
-  transition: all 0.2s ease-out;
+  transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
 }
 
 .tab-button-container {
@@ -118,11 +118,11 @@ nav {
 /* tab button rotation animetion */
 .tab-button-strait {
   transform: rotateZ(0deg);
-  transition: all 0.12s ease-in-out;
+  transition: all 0.12s cubic-bezier(0.4, 0, 1, 1);
 }
 .tab-button-rotate {
   transform: rotateZ(45deg);
-  transition: all 0.12s ease-in-out;
+  transition: all 0.12s cubic-bezier(0.4, 0, 1, 1);
 }
 
 #tab-close {
@@ -144,12 +144,12 @@ nav {
 .mo-tab-out {
   transform: translate(0%);
   background-color: var(--top-nav-primary-color);
-  transition: all 0.12s ease-in-out;
+  transition: all 0.12s cubic-bezier(0.4, 0, 1, 1);
 }
 .mo-tab-close {
   transform: translate(-100%);
   background-color: var(--top-nav-secondary-color);
-  transition: all 0.12s ease-in-out;
+  transition: all 0.12s cubic-bezier(0.4, 0, 1, 1);
 }
 
 /* section intro */
@@ -157,8 +157,9 @@ nav {
   background: linear-gradient(55deg, #49178fff 30%, #45b0c6ff 100%);
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 #home-overlay-img2 {
@@ -175,23 +176,38 @@ nav {
   height: 100%;
 }
 
-.button-body {
+.lets-talk {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
-  margin-top: 15vh;
+  background-color: antiquewhite;
   width: 130px;
   height: 50px;
   border-radius: 9px;
+  margin-bottom: 60px;
   box-shadow: 3px 7px 5px rgba(0, 0, 0, 0.301);
+  transition: all 0.1s cubic-bezier(0.4, 0, 1, 1) 0.1s;
 }
-.button-body:hover {
-  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.301);
+/* .lets-talk {
+  position: fixed;
+  top: 80%;
+  left: 80%;
+} */
+.lets-talk:hover {
+  background-color: rgb(255, 255, 255);
 }
-.button-body:active {
+.lets-talk:active {
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.301);
   transform: translateY(2px);
+}
+#welcomeMSG {
+  /* position: absolute; */
+  color: antiquewhite;
+  font-size: 30px;
+  text-align: center;
+  width: 80%;
+  padding-bottom: 5%;
+  height: auto;
 }
 /* section project */
 #projects {
@@ -236,5 +252,8 @@ footer {
   }
   #tab-for-mobile {
     display: block;
+  }
+  #welcomeMSG {
+    padding-bottom: 10%;
   }
 }
