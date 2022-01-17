@@ -13,6 +13,8 @@
   --max-nav-height: 17vh;
   --top-nav-primary-color: rgba(0, 0, 0, 0.6);
   --top-nav-secondary-color: rgba(0, 0, 0, 0.3);
+  --card-Height: 250px;
+  --card-width: 200px;
 }
 /* Default Css */
 html {
@@ -211,7 +213,34 @@ nav {
 }
 /* section project */
 #projects {
+  padding-top: 12vh;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-bottom: 10%;
+  display: grid;
+  grid-gap: 20px 10px;
+  grid-template-columns: 40% 40% auto;
+  align-items: center;
+  justify-content: space-evenly;
   background-color: #ffffff;
+}
+#proj1 {
+  background-color: #1bd824;
+  height: var(--card-Height);
+  width: var(--card-width);
+  border-radius: 10px;
+}
+#proj2 {
+  background-color: #bc1bd8;
+  height: var(--card-Height);
+  width: var(--card-width);
+  border-radius: 10px;
+}
+#proj3 {
+  background-color: #cbd81b;
+  height: var(--card-Height);
+  width: var(--card-width);
+  border-radius: 10px;
 }
 
 /* section github */
@@ -236,6 +265,12 @@ footer {
   #nav-buttons {
     width: 60%;
   }
+  #projects {
+    grid-template-columns: 50% auto;
+  }
+  .section {
+    height: auto;
+  }
   /* #home-overlay-img1 {
     display: none;
   }
@@ -255,5 +290,12 @@ footer {
   }
   #welcomeMSG {
     padding-bottom: 10%;
+  }
+  #projects {
+    display: flex;
+    flex-direction: column;
+  }
+  .section {
+    height: auto;
   }
 }
